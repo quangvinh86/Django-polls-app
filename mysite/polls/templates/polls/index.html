@@ -3,7 +3,7 @@
 {% for question in latest_question_list %}
     <!-- method1: hardcoded -->
     <!-- <li><a href="/polls/{{ question.id }}/">{{ question.question_text }}</a></li> -->
-  
+    
     <!-- method2: remove hard coded and use app namespace -->
     <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
     
